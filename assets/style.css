@@ -1,0 +1,121 @@
+:root {
+    /* Base Variables */
+    --fs: 12px;
+    --45: 45deg;
+    --135: 135deg;
+    --omb: 0 1rem 1rem var(--noire);
+    --omb-btn: 0 0 5px var(--noire);
+    --omb-svg: drop-shadow(0 0 1px var(--noire));
+
+    /* Base Colors */
+    --black: hsl(0, 0%, 0%);
+    --noire: hsla(264, 29%, 6%, 1);
+    --grays: hsl(280, 3%, 31%);
+    --jaune: hsl(36, 31%, 60%);
+    --beige: hsl(37, 12%, 67%);
+    --blanc: hsl(40, 8%, 89%);
+
+    /* Gradients */
+    --voir: linear-gradient(var(--135), var(--beige), var(--jaune));
+    --gold: linear-gradient(var(--45), var(--jaune), var(--blanc));
+    --dark: linear-gradient(var(--135), var(--grays), var(--black));
+}
+
+/* General Style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    background: var(--black);
+    font-size: var(--fs);
+    color: var(--noire);
+}
+h1 {
+    color: var(--jaune);
+}
+p {
+    word-wrap: break-word;
+    width: 50%;
+    line-height: 2rem;
+    text-align: center;
+}
+a:link, a:visited {
+    text-decoration: none;
+    color: var(--noire);
+}
+a:hover {
+    color: var(--jaune);
+}
+a:active {
+    color: var(--black);
+}
+img {
+    height: 100%;
+}
+button {
+    background: var(--dark);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    color: var(--blanc);
+    box-shadow: 0 0 5px var(--noire);
+}
+button:hover {
+    background: var(--voir);
+    color: var(--noire);
+    box-shadow: var(--omb-btn);
+}
+section {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* #home Style */
+section#home {
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+}
+section#necklaces {
+    background: var(--jaune);
+}
+section#rings {
+    background: var(--jaune);
+}
+section#earrings {
+    background: var(--beige);
+}
+section#bangles {
+    background: var(--jaune);
+}
+section#about {
+    background: var(--dark);
+}
+#home article.main {
+    width: 50vw;
+    height: 90vh;
+    background: var(--gold);
+    box-shadow: var(--omb);
+}
+article.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+article.main ul {
+    display: flex;
+    justify-content: space-around;
+}
+article.main li {
+    list-style: none;
+    margin: 1rem;
+    text-transform: uppercase;
+}
+article.main img.logo {
+    width: 25%;
+    filter: var(--omb-svg);
+}
