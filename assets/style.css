@@ -53,7 +53,7 @@ a:active {
     color: var(--black);
 }
 img {
-    height: 100%;
+    width: 100%;
 }
 button {
     background: var(--dark);
@@ -79,6 +79,59 @@ section#home {
     display: flex;
     align-items: center;
 }
+#home article.main {
+
+    height: 90vh;
+    background: var(--gold);
+    box-shadow: var(--omb);
+}
+article.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+header {
+    width: 100%;
+}
+#menu {
+    width: 100%;
+    display: flex;
+}
+article.main li {
+    list-style: none;
+    margin: 1rem auto;
+    text-transform: uppercase;
+}
+article.main img.logo {
+    width: 25%;
+    height: auto;
+    filter: var(--omb-svg);
+}
+
+article.main, article.back {
+    display: flex;
+    width: 50vw;
+    justify-content: space-between;
+}
+article.back div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+article.back div {
+    height: 100vh;
+}
+.back div:nth-child(2) {
+    display: flex;
+    justify-content: space-around;
+}
+
+article.back div img {
+    width: 100%;
+    height: auto;
+}
 section#necklaces {
     background: var(--jaune);
 }
@@ -93,29 +146,4 @@ section#bangles {
 }
 section#about {
     background: var(--dark);
-}
-#home article.main {
-    width: 50vw;
-    height: 90vh;
-    background: var(--gold);
-    box-shadow: var(--omb);
-}
-article.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-article.main ul {
-    display: flex;
-    justify-content: space-around;
-}
-article.main li {
-    list-style: none;
-    margin: 1rem;
-    text-transform: uppercase;
-}
-article.main img.logo {
-    width: 25%;
-    filter: var(--omb-svg);
 }
